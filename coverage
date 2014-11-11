@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -o errexit
+set -o pipefail
 readonly GOPATH="${GOPATH%%:*}"
 
 main() {
