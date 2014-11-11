@@ -17,7 +17,7 @@ script:
 - ./fmtpolice
 ```
 
-Example `coverage` usage with `goveralls`:
+Example `coverage` usage with [`goveralls`](https://github.com/mattn/goveralls):
 
 ```yaml
 ---
