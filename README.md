@@ -11,7 +11,7 @@ gofmt and golint checking script to be used as part of Go tests
 language: go
 install:
 - go get -t ./...
-- curl -sLO https://raw.githubusercontent.com/rafecolton/fmtpolice/master/fmtpolice && chmod +x fmtpolice
+- curl -sLOf https://raw.githubusercontent.com/rafecolton/fmtpolice/master/fmtpolice && chmod +x fmtpolice
 script:
 - go test ./...
 - ./fmtpolice
@@ -25,7 +25,7 @@ script:
 language: go
 install:
 - go get -t ./...
-- curl -sLO https://raw.githubusercontent.com/rafecolton/fmtpolice/master/coverage && chmod +x coverage
+- curl -sLOf https://raw.githubusercontent.com/rafecolton/fmtpolice/master/coverage && chmod +x coverage
 - go get -u code.google.com/p/go.tools/cmd/cover || go get -u golang.org/x/tools/cmd/cover
 - go get -u github.com/axw/gocov/gocov github.com/mattn/goveralls
 script:
