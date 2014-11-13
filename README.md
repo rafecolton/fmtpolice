@@ -3,7 +3,7 @@ fmtpolice
 
 gofmt and golint checking script to be used as part of Go tests
 
-#### Example `fmtpolice` usage:
+**Example `fmtpolice` usage:**
 
 ```yaml
 ---
@@ -17,7 +17,7 @@ script:
 - bash fmtpolice
 ```
 
-#### Example `coverage` usage with [`goveralls`](https://github.com/mattn/goveralls):
+**Example `coverage` usage with [`goveralls`](https://github.com/mattn/goveralls):**
 
 ```yaml
 ---
