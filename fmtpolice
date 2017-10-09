@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# See https://github.com/rafecolton/fmtpolice
+
 readonly GOPATH="${GOPATH%%:*}"
 
 main() {
@@ -14,6 +16,7 @@ __gofiles() {
 check_fmt() {
   eval "set -e"
   for file in $(__gofiles) ; do
+    echo "checking gofmt for $file"
     gofmt $file | diff -u $file -
   done
   eval "set +e"
@@ -23,6 +26,7 @@ check_lint() {
   _install_linter
 
   for file in $(__gofiles) ; do
+    echo "linting $file"
     if [[ ! "$(${GOPATH}/bin/golint $file)" =~ ^[[:blank:]]*$ ]] ; then
       _lint_verbose && exit 1
     fi
