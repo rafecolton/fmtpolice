@@ -8,7 +8,7 @@ main() {
 }
 
 __gofiles() {
-  git ls-files '*.go' | grep -vE '^vendor/'
+  find . -name '*.go' | grep -vE '^vendor/'
 }
 
 check_fmt() {
